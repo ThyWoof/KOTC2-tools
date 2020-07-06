@@ -35,9 +35,9 @@ def dump_actor(stream):
     actor_name = get_string(stream, actor_name_len)
     print(f'INFO: Name: {actor_name}')
 
-    class_desc_len = get_number(stream, 4)
-    class_desc = get_string(stream, class_desc_len)
-    print(f'INFO: Description: {class_desc}')
+    # class_desc_len = get_number(stream, 4)
+    # class_desc = get_string(stream, class_desc_len)
+    # print(f'INFO: Description: {class_desc}')
 
     race_name_len = get_number(stream, 4)
     race_name = get_string(stream, race_name_len)
@@ -88,8 +88,7 @@ def dump_character_hoster(filename):
     
 def main():
     args = get_args()
-    if args.dump:
-        dump_character_hoster(args.character_hoster_file)
+    dump_character_hoster(args.character_hoster_file)
 
 if __name__ == '__main__':
     main()
